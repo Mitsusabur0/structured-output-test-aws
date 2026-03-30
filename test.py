@@ -8,8 +8,8 @@ USER_INPUT = "Busco depa en santiago con dos dormitorios"
 
 
 
-# MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
-MODEL_ID = "qwen.qwen3-32b-v1:0"
+# MODEL_ID = "qwen.qwen3-32b-v1:0"
+MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 
 # Initialize the Bedrock Runtime client
@@ -18,8 +18,8 @@ bedrock_runtime = boto3.client(
     region_name='us-east-1' 
 )
 
-system_prompt = [{"text": "Tu trabajo es extraer filtros de búsqueda para una página "
-                  "chilena de venta de propiedades."}]
+system_prompt = [{"text": "Tu trabajo es extraer filtros de búsqueda de un user_input, para un portal "
+                  "chileno de venta de propiedades."}]
 
 
 # Make the request with structured outputs

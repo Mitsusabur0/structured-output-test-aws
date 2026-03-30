@@ -27,9 +27,6 @@ system_prompt = [{"text": "Tu trabajo es extraer filtros de búsqueda para una p
                   "del usuario. Los filtros del usuario tienen prioridad por sobre los actuales, "
                   "pero si el usuario no especifica un filtro que ya estaba presente, este debe mantenerse."}]
 
-system_prompt = [{"text": "Tu trabajo es extraer filtros de búsqueda para una página "
-                  "chilena de venta de propiedades."}]
-
 
 CURRENT_FILTERS_PATH = Path(__file__).with_name("current_filters.json")
 
@@ -86,7 +83,6 @@ response = bedrock_runtime.converse(
 
 result = json.loads(response["output"]["message"]["content"][0]["text"])
 
-# IN HERE -> INSERT A FUNCTION THAT WRITES TO THE FILE WITH CURRENT FILTERS
 def write_current_filters(result):
     CURRENT_FILTERS_PATH.write_text(
         json.dumps(result, ensure_ascii=False, indent=2),
