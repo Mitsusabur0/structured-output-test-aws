@@ -47,8 +47,8 @@ response = bedrock_runtime.converse(
             "structure": {
                 "jsonSchema": {
                     "schema": json.dumps(extraction_schema),
-                    "name": "lead_extraction",
-                    "description": "Extract lead information from customer emails"
+                    "name": "search_filters_schema",
+                    "description": "Extract search filters from customer input for a Chilean real estate platform."
                 }
             }
         }

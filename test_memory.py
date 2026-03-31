@@ -4,7 +4,7 @@ from pathlib import Path
 from schema import extraction_schema
 
 
-USER_INPUT = "Busco depa en santiago con dos dormitorios"
+USER_INPUT = "casa"
 
 # MODEL_ID = "google.gemma-3-12b-it"
 # MODEL_ID = "openai.gpt-oss-120b-1:0"
@@ -65,8 +65,8 @@ response = bedrock_runtime.converse(
             "structure": {
                 "jsonSchema": {
                     "schema": json.dumps(extraction_schema),
-                    "name": "lead_extraction",
-                    "description": "Extract lead information from customer emails"
+                    "name": "search_filters_schema",
+                    "description": "Extract search filters from customer input for a Chilean real estate platform."
                 }
             }
         }
