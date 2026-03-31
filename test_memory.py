@@ -6,15 +6,10 @@ from schema import extraction_schema
 
 USER_INPUT = "Busco depa en santiago con dos dormitorios"
 
-
-
-
 # MODEL_ID = "google.gemma-3-12b-it"
 # MODEL_ID = "openai.gpt-oss-120b-1:0"
 # MODEL_ID = "qwen.qwen3-32b-v1:0"
 MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
-
-
 
 # Initialize the Bedrock Runtime client
 bedrock_runtime = boto3.client(
